@@ -10,7 +10,7 @@ pipeline {
                 sh 'cd Jenkins && ls -ltr'
                 sh 'sudo docker ps'
                 sh 'sudo docker images'
-                sudo docker build -t rabitanginx03
+                sh 'sudo docker build -t rabitanginx03 .'
                 sh 'sudo docker images'
             }
         }
