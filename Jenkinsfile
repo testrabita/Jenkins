@@ -12,6 +12,8 @@ pipeline {
                 sh 'sudo docker images'
                 sh 'sudo docker build -t rabitanginx03 .'
                 sh 'sudo docker images'
+                sh 'sudo docker run -dit --name rabitanginx03 -p8021:80 rabitanginx03/nginx02:1.2'
+
             }
         }
     }
