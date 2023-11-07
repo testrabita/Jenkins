@@ -1,5 +1,6 @@
 pipeline {
-    agent any                                                                                                                                                                                                                                                                           stages {
+    agent any 
+stages{                                                                                                                                                                                                                                                                          stages {
         stage('Git Connect') {
 steps {
                 sh 'rm -Rf Jenkins'
@@ -26,5 +27,7 @@ sh 'sudo docker ps'
                sh 'sudo docker image tag rabitanginx03 rabita/rabitanginx03:1.0'                                                               
  }
         }
+
     }
+
 }    
