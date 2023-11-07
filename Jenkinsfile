@@ -1,6 +1,6 @@
 pipeline {
-    agent any 
-stages{                                                                                                                                                                                                                                                                          stages {
+    agent any                                                                                                                                                                                                                                                                
+stages {
         stage('Git Connect') {
 steps {
                 sh 'rm -Rf Jenkins'
@@ -8,6 +8,7 @@ steps {
                 sh 'cd Jenkins && ls -ltr'
                 }                                                                                                                                         
 }
+
 stage('Docker Image Creation')                                                                                                            
 {                                                                                                                                         
 steps{         
@@ -19,7 +20,8 @@ sh 'sudo docker ps'
                 sh 'sudo docker rm rabitanginx03'
                 sh 'sudo docker run -dit --name rabitanginx03 -p8020:80 rabitanginx03'
 } 
-}                                                                 
+}  
+                                                               
  stage('Tag Image')                                                                                                                        
 {                                                                                                                                        
  steps
