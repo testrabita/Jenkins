@@ -18,7 +18,7 @@ sh 'sudo docker ps'
                 sh 'sudo docker images'
                 sh 'sudo docker stop rabitanginx03'
                 sh 'sudo docker rm rabitanginx03'
-                sh 'sudo docker run -dit --name rabitanginx03 -p8020:80 rabitanginx03'
+                sh 'sudo docker run -dit --name rabitanginx03 -p8021:80 rabitanginx03'
 } 
 }  
                                                                
