@@ -26,14 +26,14 @@ sh 'sudo docker ps'
 {                                                                                                                                        
  steps
 {
-               sh 'sudo docker image tag rabitanginx03 rabita/rabitanginx03:1.0'                                                               
+               sh 'sudo docker image tag rabitanginx03 rabita13/rabitanginx03:1.0'                                                               
  }
         }
 
 stage('push Image to docker Hub')
 {
 steps{
-      sh 'sudo docker login -u=${udockerrabita} -p=${pdockerrabita} && sudo docker push rabita/rabitanginx03:1.0'
+      sh 'sudo docker login -u=${udockerrabita} -p=${pdockerrabita} && sudo docker push rabita13/rabitanginx03:1.0'
     }
     }
 
