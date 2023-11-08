@@ -30,6 +30,13 @@ sh 'sudo docker ps'
  }
         }
 
+stage('push Image to docker Hub')
+{
+steps{
+      sh 'sudo docker login -u=${udockerrabita} -p=${pdockerrabita} && sudo docker push srabita/rabitanginx03:1.0'
+    }
+    }
+
     }
 
 }    
