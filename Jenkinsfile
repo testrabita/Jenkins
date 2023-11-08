@@ -38,7 +38,7 @@ steps{
     }
 
 
-    stages('AWS Setup')
+    stage('AWS Setup')
     {
     steps
    {
