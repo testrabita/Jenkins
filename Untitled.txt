@@ -1,0 +1,9 @@
+ 
+http://13.232.246.203:8080/
+Rabita@123
+
+
+git commit -m "Added main.tf "
+
+
+

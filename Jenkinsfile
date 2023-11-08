@@ -37,6 +37,19 @@ steps{
     }
     }
 
+
+    stages('AWS Setup')
+    {
+    steps
+   {
+sh 'terraform init'
+sh 'terraform apply -auto-approve'
+sh 'terraform destroy -auto-approve'
+
+   }
     }
 
-}    
+
+
+}  
+}  
