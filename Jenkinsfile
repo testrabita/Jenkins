@@ -44,7 +44,7 @@ steps{
    {
    sh 'chmod 600 jmtksrv01.pem'
    sh 'scp -i jmtksrv01.pem -o StrictHostKeyChecking=no kube01.yaml ec2-user@3.109.133.86:/home/ec2-user/'
-   sh 'ssh -i jmtksrv01.pem -o StrictHostKeyChecking=no ec2-user@e3.109.133.86 "kubectl create -f kube01.yaml"'
+   sh 'ssh -i jmtksrv01.pem -o StrictHostKeyChecking=no ec2-user@3.109.133.86 "kubectl create -f kube01.yaml"'
    }
     }
 
