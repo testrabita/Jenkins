@@ -38,13 +38,12 @@ steps{
     }
 
 
-    stage('AWS Setup')
+    stage('kubernetes Deploy')
     {
     steps
    {
-sh 'terraform init'
-sh 'terraform apply -auto-approve'
-sh 'terraform destroy -auto-approve'
+   sh 'chmod 600 jmtksrv01.pem'
+   sh 'scp -i jmtksrv01.pem -o StrictHostKeyChecking=no kub01.yml ec2-user@3.109.133.86:/home/ec2-user/'
 
    }
     }
